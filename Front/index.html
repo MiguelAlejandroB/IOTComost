@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Sensores Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+
+        </div>
+        <div class="header-right">
+
+          <span class="material-icons-outlined">email</span>
+
+        </div>
+      </header>
+      <!-- End Header -->
+      
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <h2>Sensores Dasboard - Proyecto Instrumentación</h2>
+        </div>
+
+        <div class="main-cards">
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>Humedad %</h3>
+              <span class="material-icons-outlined">inventory_2</span>
+            </div>
+            <h1>0</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>Temperatura °C</h3>
+              <span class="material-icons-outlined">category</span>
+            </div>
+            <h1>0</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>Gas</h3>
+              <span class="material-icons-outlined">groups</span>
+            </div>
+            <h1>0</h1>
+          </div>
+
+
+        </div>
+        <div class="charts">
+          <!-- Humedad -->
+          <div class="charts-card">
+            <h2 class="chart-title">Sensor de Humedad</h2>
+            <div style="display: flex; gap: 10px; align-items: flex-start;">
+              <!-- Gráfico -->
+              <div id="humidity-chart" style="flex: 4;"></div>
+              <!-- Tabla -->
+              <div style="flex: 1;margin-left: 20px;">
+                <table class="sensor-table">
+                  <thead>
+                    <tr>
+                      <th>Fecha</th>
+                      <th>Humedad (%)</th>
+                    </tr>
+                  </thead>
+                  <tbody id="humidity-table-body">
+                    <!-- Filas dinámicas -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Temperatura -->
+          <div class="charts-card">
+            <h2 class="chart-title">Sensor de Temperatura</h2>
+            <div style="display: flex; gap: 10px; align-items: flex-start;">
+              <!-- Gráfico -->
+              <div id="temperature-chart" style="flex: 4;"></div>
+              <!-- Tabla -->
+              <div style="flex: 1; margin-left: 20px;">
+                <table class="sensor-table">
+                  <thead>
+                    <tr>
+                      <th>Fecha</th>
+                      <th>Temperatura (°C)</th>
+                    </tr>
+                  </thead>
+                  <tbody id="temperature-table-body">
+                    <!-- Filas dinámicas -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Gas -->
+          <div class="charts-card">
+            <h2 class="chart-title">Sensor de Gas</h2>
+            <div style="display: flex; gap: 10px; align-items: flex-start;">
+              <!-- Gráfico -->
+              <div id="gas-chart" style="flex: 4"></div>
+              <!-- Tabla -->
+              <div style="flex: 1; margin-left: 20px;">
+                <table class="sensor-table">
+                  <thead>
+                    <tr>
+                      <th>Fecha</th>
+                      <th>Gas (ppm)</th>
+                    </tr>
+                  </thead>
+                  <tbody id="gas-table-body">
+                    <!-- Filas dinámicas -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+          
+
+        </div>
+      </main>
+      <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
